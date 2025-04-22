@@ -1,4 +1,7 @@
+require('dotenv').config();
 const express = require("express");
+const serverless = require("serverless-http");
+
 const cors = require("cors");
 
 const app = express();
@@ -259,7 +262,10 @@ app.get("/", (req, res) => {
 
 });
 
-const PORT = 9000;
+const PORT = process.env.PORT||900;
+
 app.listen(PORT, () =>
   console.log(`SSE server running at http://localhost:${PORT}`)
 );
+// Export handler for serverless
+module.exports = serverless(app);
