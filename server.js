@@ -110,7 +110,6 @@ app.get("/service/sse", (req, res) => {
       if (!isPaused) {
         res.write(`data: ${JSON.stringify(data)}\n\n`);
         count++;
-        console.log({ isPaused, step: data.CurrentStep, error: false });
       }
 
       // If paused and no error, skip sending
