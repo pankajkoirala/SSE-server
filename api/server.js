@@ -262,10 +262,10 @@ app.get("/", (req, res) => {
 
 });
 
-const PORT = process.env.PORT||900;
+// const PORT = process.env.PORT||900;
 
-app.listen(PORT, () =>
-  console.log(`SSE server running at http://localhost:${PORT}`)
-);
+// app.listen(PORT, () =>
+//   console.log(`SSE server running at http://localhost:${PORT}`)
+// );
 // Export handler for serverless
 module.exports = serverless(app);
