@@ -103,7 +103,6 @@ app.get("/service/sse", (req, res) => {
         res.write(`data: ${JSON.stringify(data)}\n\n`);
         isPaused = true;
         count++;
-        console.log({ isPaused, step: data.CurrentStep, error: true });
         return;
       }
 
