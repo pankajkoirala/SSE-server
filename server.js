@@ -55,7 +55,7 @@ const errorSamples = [
 
 steps.forEach((step) => {
   for (let i = 0; i < 5; i++) {
-    const shouldHaveError = Math.random() < 0; // currently 0% chance to show an error
+    const shouldHaveError = Math.random() < 5; // currently 0% chance to show an error
 
     result.push({
       CurrentStep: step,
